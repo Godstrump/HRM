@@ -1,0 +1,31 @@
+.management {
+    grid-column: tab-start / -1;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    grid-gap: 0;
+
+    margin-top: 15rem;
+    
+    background-color: $color-pry-1;
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 10rem;
+    margin-left: 1rem;
+    margin-right: 17rem;
+
+    &__leave {
+        @include tab;
+        transform: translateY(-1rem);
+    }
+
+    &__employee {
+        @include tab;
+        transform: translateY(-3rem);
+    }
+
+    &__project {
+        @include tab;
+    }
+}

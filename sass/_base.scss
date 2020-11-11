@@ -1,0 +1,87 @@
+//VARIABLES
+$color-pry-1: rgb(239, 239, 239);
+
+$color-green-light: rgb(4, 64, 4);
+$color-green-dark: rgb(7, 121, 0);
+$color-pink-light: rgb(229, 78, 206);
+$color-pink-dark: rgb(231, 74, 92);
+
+$color-dot-yellow: rgb(236, 207, 15);
+$color-nav-grey: rgb(193, 214, 195);
+
+$color-sub-header-grey: rgb(122, 122, 122);
+$color-sub-text-green: rgb(40, 122, 40);
+$color-sub-text-green-dark: rgb(1, 68, 0);
+$color-sub-text-green-light: rgb(3, 158, 4);
+$color-sub-text-white: rgb(242, 255, 243);
+
+$color-payroll-grey: rgb(232, 232,232);
+$color-payroll-grey-p: rgb(181, 177, 176);
+$color-payroll-grey-h: rgb(8, 8, 8);
+$color-payroll-button: rgb(149, 149, 149);
+$color-payroll-before: rgb(14, 140, 14);
+
+$color-footer-blue: rgb(0,0,28);
+$color-footer-selected: rgb(248,246,247);
+$color-footer-nav: rgb(169,165,179);
+
+
+//MIXINS
+@mixin tab {
+    background-color: white;
+    margin-right: 10rem;
+    border-width: thin;
+    border-radius: 3%;
+    padding: 1rem 3rem 3rem 3rem;
+    box-shadow: .1rem .07rem 3rem rgba(0, 0, 0, .3);
+
+    .management__h {
+        color: $color-payroll-grey-h;
+        font-size: 1.4rem;
+        padding-top: 1rem;
+    }
+
+    .management__p {
+        color: $color-payroll-grey-p;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        text-align: left;
+    }
+}
+
+
+:root {
+    --color-pry-svg-1: rgb(236, 207, 15);
+    --color-pry-svg-2: rgb(5, 133, 192);
+}
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html  {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Helvetica;
+    font-weight: normal;
+    line-height: 1.6;
+    background-color: $color-pry-1;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 80vh repeat(3, min-content);
+    grid-template-columns: [full-start] 17rem [center-start] .9fr [tab-start] 1fr 1fr  repeat(7, 
+    [col-start] minmax(min-content, 15rem) [col-end]) [center-end] 1fr [full-end];
+
+    position: relative;
+
+    overflow-x: hidden;
+} 
